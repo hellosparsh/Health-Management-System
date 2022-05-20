@@ -79,16 +79,20 @@ def retrieve(HRS,ED):
         f.close()
     return "Retrieved successfully"
 
-print("Hello and welcome to my health management system","\nWhat do you want to do ?")
-print("1 : Log\n2 : Retrieve")
-LR=int(input())
-print("Which client ?")
-print("1 : Harry\n2 : Rohan\n3 : Sparsh")
-HRS=int(input())
-print("Enter choice")
-print("1 : Exercise\n2 : Diet")
-ED=int(input())
-if LR==1:
-    print(log(HRS,ED))
-else:
-    print(retrieve(HRS,ED))
+print("Hello and welcome to my health management system")
+    
+while True:
+    print("Enter your choice :","\n1 : Log\n2 : Retrieve\n3 : Quit")
+    LR=int(input())
+    if LR==3:
+        exit()
+    print("Which client ?")
+    print("1 : Harry\n2 : Rohan\n3 : Sparsh")
+    HRS=int(input())
+    print("Enter choice")
+    print("1 : Exercise\n2 : Diet")
+    ED=int(input())
+    if LR==1:
+        print(log(HRS,ED))
+    else:
+        print(retrieve(HRS,ED))
